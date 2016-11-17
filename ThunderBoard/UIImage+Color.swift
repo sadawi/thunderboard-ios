@@ -11,7 +11,7 @@ extension UIImage {
     class func tb_imageWithColor(color: UIColor, size: CGSize) -> UIImage? {
         let rect = CGRectMake(0, 0, size.width, size.height)
         UIGraphicsBeginImageContext(rect.size)
-        let context = UIGraphicsGetCurrentContext()
+        let context = UIGraphicsGetCurrentContext()!
         
         CGContextSetFillColorWithColor(context, color.CGColor)
         CGContextFillRect(context, rect)
@@ -31,7 +31,7 @@ extension UIImage {
         let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: image.size.width, height: image.size.height))
         
         UIGraphicsBeginImageContextWithOptions(rect.size, false, image.scale)
-        let context = UIGraphicsGetCurrentContext()
+        let context = UIGraphicsGetCurrentContext()!
         image.drawInRect(rect)
         CGContextSetFillColorWithColor(context, color.CGColor)
         CGContextSetBlendMode(context, .SourceAtop)

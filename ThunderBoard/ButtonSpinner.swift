@@ -9,7 +9,7 @@ import UIKit
 
 public let π = M_PI
 
-class ButtonAnimationTrackLayer: CALayer {
+class ButtonAnimationTrackLayer: CALayer, CAAnimationDelegate {
     
     private let trackLayer = CAShapeLayer()
     
@@ -170,7 +170,7 @@ class ButtonAnimationTrackLayer: CALayer {
         trackLayer.addAnimation(strokeEndAnim, forKey: "stroke")
     }
     
-    override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
+    func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         if starting {
             animating = true
             starting = false

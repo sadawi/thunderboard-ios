@@ -54,7 +54,7 @@ class SettingsTableViewHeader : UITableViewHeaderFooterView {
         
         self.contentView.addConstraint(NSLayoutConstraint(
             item: titleLabel,
-            attribute: .Baseline,
+            attribute: .LastBaseline,
             relatedBy: .Equal,
             toItem: self.contentView,
             attribute: .Bottom,

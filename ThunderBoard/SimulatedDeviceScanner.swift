@@ -148,7 +148,7 @@ class SimulatedDeviceScanner : DeviceScanner, DeviceConnection {
     private func simulateDiscoveredDevice() {
         discoveredDevices.forEach({
             $0.simulatedScanner = self
-            $0.RSSI = (-1 * Int(rand()) % 100)
+            $0.RSSI = (-1 * Int(arc4random()) % 100)
             self.scanningDelegate?.discoveredDevice($0)
         })
     }

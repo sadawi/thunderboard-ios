@@ -118,7 +118,7 @@ class SimulatedMotionDemoConnection: MotionDemoConnection {
     }
     
     private func randomFloat() -> Float {
-        return ceilf(Float(random())/Float(RAND_MAX) * 100) / 100
+        return ceilf(Float(arc4random())/Float(RAND_MAX) * 100) / 100
     }
 }
 

@@ -159,7 +159,7 @@ func ==(lhs: SimulatedDevice, rhs: SimulatedDevice) -> Bool {
 
 extension Array {
     func random() -> Element {
-        let randomIndex = Int(rand()) % count
+        let randomIndex = Int(arc4random()) % count
         return self[randomIndex]
     }
 }
